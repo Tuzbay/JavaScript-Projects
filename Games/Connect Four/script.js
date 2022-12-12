@@ -1,3 +1,13 @@
+// NOTLAR \\
+// ---------------------------------------------------------------------------------------------------------------------------------------- \\
+
+// Bug --> Bir kişi oyunu kazandıktan sonra hala oyuna devam edebiliyoruz. Oyun bittikten sonra bir buton gelmeli ve o butona basıldığında oyun yeniden başlamalı.
+
+// FixMe --> Css ile görsellik güzelleştirilmelidir.
+// FixMe --> Kullanıcılar isimlerini girdikleri, renklerini seçtikleri bir anasayfa olmalıdır. Bir buton aracılığı ile oyun başlamalıdır. Oyun bittiğinde de bu anasayfaya geri dönülebilir veya oyun tekrardan başlatılabilmelidir.
+
+// ---------------------------------------------------------------------------------------------------------------------------------------- \\
+
 const squares = document.querySelectorAll(".grid div");
 const result = document.querySelector("#result");
 const displayCurrentPlayer = document.querySelector("#current-player");

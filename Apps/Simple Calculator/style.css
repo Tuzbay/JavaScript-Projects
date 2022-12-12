@@ -1,0 +1,111 @@
+h5 {
+    text-align: center;
+}
+
+.calculator__main {
+    width: 160px;
+    height: 195px;
+    border-radius: 4px;
+    margin: auto auto;
+    background-color: rgb(241, 235, 226);
+}
+
+/* .calculator__main:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+} */
+
+.calculator__screen {
+    height: 30px;
+}
+
+.calculator__button-area {
+    display: flex;
+    flex-direction: column;
+    height: 155px;
+}
+
+.calculator__button-area__col {
+    display: flex;
+    align-items: flex-end;
+    margin: 0px 1px 0px 1px;
+}
+
+.calculator__button-area__col div {
+    width: 40px;
+    height: 22px;
+    background-color: rgb(244, 227, 206);
+    border-radius: 2px;
+    margin: 1px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.calculator__button-area__col .button-white {
+    background-color: white;
+}
+
+.calculator__button-area__col .button-white:hover {
+    background-color: #f9f6f6;
+}
+
+.calculator__button-area__col .button-blue {
+    background-color: rgb(49, 49, 191);
+    color: white;
+}
+
+.calculator__button-area__col .button-blue:hover {
+    background-color: rgb(49, 49, 191, 0.9);
+    color: white;
+}
+
+.calculator__button-area__col .button-gray {
+    background-color: #f9f6f6;
+}
+
+.calculator__button-area__col .button-gray:hover,
+.calculator__button-area__col .button-whitish:hover {
+    background-color: #f4eded;
+}
+
+.calculator__button-area__col .button-whitish {
+    background-color: #f8f4f4;
+}
+
+.calculator__top {
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.calculator__top div {
+    font-size: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 8px 0 8px;
+    cursor: pointer;
+}
+
+
+.calculator__top div:nth-child(2):hover {
+    background-color: rgb(162, 41, 41);
+    border-radius: 0 2px 0 0;
+    color: white;
+}
+
+.calculator__top div:nth-child(1):hover {
+    background-color: #edeaea;
+    border-radius: 2px 0 0 0;
+}
+
+.calculator__screen .screen {
+    font-size: 22px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    margin-top: 4px;
+}
