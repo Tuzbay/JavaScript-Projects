@@ -4,12 +4,7 @@
 
 body {
     margin: 0;
-    background-image: url("./luc-van-loon-ucrtTAfwJTk-unsplash.jpg");
     min-height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    object-fit: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,4 +36,104 @@ h1 {
 
 .countdown-el span {
     font-size: 1.3rem;
+}
+
+/* ! FORM */
+
+h2 {
+    text-align: center;
+    margin: -3rem;
+}
+
+form {
+    margin-top: 2rem;
+    padding: 40px;
+    position: relative;
+}
+
+form .form-item-top {
+    margin-bottom: 20px;
+}
+
+.form-div label {
+    width: 200px;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-div input {
+    width: 100%;
+    height: 30px;
+}
+
+form .btn {
+    width: 50%;
+    margin-top: 30px;
+    padding: 6px;
+    background-color: #dbdbdb;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+form .btn:hover {
+    background-color: #e7e5e5;
+}
+
+form .btn:active {
+    background-color: #acaaaa;
+}
+
+h3 {
+    margin-top: 50px;
+    color: red;
+}
+
+h3 .visible {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table thead th {
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+}
+
+table tbody .table-item a {
+    text-decoration: none;
+    color: #09A8EC;
+    font-weight: 500;
+}
+
+table tbody .table-item a:hover {
+    color: #04709e;
+}
+
+table tbody .table-item a:active {
+    color: #034e6e;
+}
+
+th,
+td {
+    padding: 15px 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.countdown-button {
+    margin-top: 50px;
+    height: 30px;
 }

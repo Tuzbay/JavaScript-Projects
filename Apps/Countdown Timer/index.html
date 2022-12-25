@@ -5,33 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <script
-      src="https://kit.fontawesome.com/3c79492248.js"
-      crossorigin="anonymous"
-    ></script>
     <title>Countdown Timer</title>
   </head>
   <body>
-    <h1>New Years Eve</h1>
+    <h1 id="title"></h1>
 
-    <div class="countdown-container">
-      <div class="countdown-el days-container">
-        <p class="big-text" id="days">0</p>
-        <span>days</span>
+    <div id="countdown" class="countdown-container"></div>
+    <div id="stopTimer"></div>
+
+    <h2 id="title-small">Countdown Timer</h2>
+    <form>
+      <div class="form-div">
+        <div class="form-item-top">
+          <label>Countdown Title</label>
+          <input id="input-name" type="text" autocomplete="off" />
+        </div>
+        <div class="form-item-bottom">
+          <label>Countdown to Date</label>
+          <input id="input-date" type="date" />
+        </div>
       </div>
-      <div class="countdown-el hours-container">
-        <p class="big-text" id="hours">0</p>
-        <span>hours</span>
-      </div>
-      <div class="countdown-el minutes-container">
-        <p class="big-text" id="minutes">0</p>
-        <span>minutes</span>
-      </div>
-      <div class="countdown-el seconds-container">
-        <p class="big-text" id="seconds">0</p>
-        <span>seconds</span>
-      </div>
-    </div>
+      <button id="setTimer" class="btn">Set Timer</button>
+    </form>
+    <h3 id="h3"></h3>
+    <table>
+      <thead>
+        <th>#</th>
+        <th>Important Day</th>
+        <th>Date</th>
+      </thead>
+      <tbody>
+        <tr class="table-item">
+          <td>1.</td>
+          <td><a id="newYearsEve" href="#">New Years Eve</a></td>
+          <td>01 January 2023</td>
+        </tr>
+        <tr class="table-item">
+          <td>2.</td>
+          <td><a id="Ramadan" href="#">Ramadan Feast</a></td>
+          <td>21 April 2023</td>
+        </tr>
+        <tr class="table-item">
+          <td>3.</td>
+          <td>
+            <a id="National" href="#"
+              >National Sovereignty and Children's Day</a
+            >
+          </td>
+          <td>23 April 2023</td>
+        </tr>
+        <tr class="table-item">
+          <td>4.</td>
+          <td><a id="Labor" href="#">Labor and Solidarity Day</a></td>
+          <td>01 May 2023</td>
+        </tr>
+        <tr class="table-item">
+          <td>5.</td>
+          <td>
+            <a id="Commemoration" href="#"
+              >Commemoration of Ataturk, Youth and Sports Day</a
+            >
+          </td>
+          <td>19 May 2023</td>
+        </tr>
+      </tbody>
+    </table>
 
     <script src="./script.js" charset="utf-8"></script>
   </body>
