@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1 class="title">What do you think?</h1>
+
+        <div class="input-section">
+          <div class="part-one">
+            <label>
+              <input type="radio" name="inputValue" />
+              This is useful
+            </label>
+            <label>
+              <input type="radio" name="inputValue" />
+              This is not relevant
+            </label>
+          </div>
+          <div class="part-two">
+            <label>
+              <input type="radio" name="inputValue" />
+              Something is wrong
+            </label>
+            <label>
+              <input type="radio" name="inputValue" />
+              This is not useful
+            </label>
+          </div>
+        </div>
+
+        <h5>Do you have any comments or suggestions?</h5>
+        <textarea
+          class="text-input"
+          type="text"
+          placeholder="Share your suggestions"
+        ></textarea>
+
+        <p>
+          The data you provide helps us improve our platform.
+          <u>Find out more</u> if it is a legal case, you must
+          <u>submit a legal removal request.</u>
+        </p>
+        <div class="btn">
+          <button id="search-button-cancel" class="cancel">
+            <div><h3>Cancel</h3></div>
+          </button>
+          <button id="search-button" class="submit">
+            <div><h3>Submit</h3></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
