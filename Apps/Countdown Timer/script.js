@@ -1,5 +1,4 @@
 // FixMe LocalStorage kayıt özelliğini tamamla.
-// FixMe Important Days'de zamanı geçen günleri sil ve bir sonrakini ilave et. :nth child ile yapabilirsin.
 
 const content = document.getElementById("title");
 const form = document.querySelector("form");
@@ -48,6 +47,34 @@ const commemoration = document.getElementById("Commemoration");
 commemoration.addEventListener("click", () => {
   inputName.value = "Commemoration of Ataturk, Youth and Sports Day";
   inputDate.value = "2023-05-19";
+  countdown();
+});
+
+const sacrifice = document.getElementById("Sacrifice");
+sacrifice.addEventListener("click", () => {
+  inputName.value = "Feast of Sacrifice";
+  inputDate.value = "2023-06-28";
+  countdown();
+});
+
+const democracy = document.getElementById("Democracy");
+democracy.addEventListener("click", () => {
+  inputName.value = "Democracy and National Unity Day";
+  inputDate.value = "2023-07-15";
+  countdown();
+});
+
+const victory = document.getElementById("Victory");
+victory.addEventListener("click", () => {
+  inputName.value = "Victory Day";
+  inputDate.value = "2023-08-30";
+  countdown();
+});
+
+const republic = document.getElementById("Republic");
+republic.addEventListener("click", () => {
+  inputName.value = "Republic Day";
+  inputDate.value = "2023-10-29";
   countdown();
 });
 
@@ -105,7 +132,12 @@ const countdown = (e) => {
   const minutesEl = document.getElementById("minutes");
   const secondsEl = document.getElementById("seconds");
 
-  const chooseTime = new Date(inputDate.value); // * Bu satırda Countdown to Date bölümündeki tarih alınır.
+  // if (localStorage.getItem("countdown")) {
+  //   chooseTime = new Date(JSON.parse(localStorage.getItem("countdown")));
+  // } else {
+  // }
+
+  chooseTime = new Date(inputDate.value); // * Bu satırda Countdown to Date bölümündeki tarih alınır.
   const current = new Date(); // * Şu an localde bulunulan zaman alınır.
 
   const totalsec = (chooseTime - current) / 1000 - 10800; // * Bu zamanlar birbirinden çıkarılarak 1000'e bölünür ve aralarındaki toplam saniye bulunur. 3 saat zaman farkından dolayı manuel olarak 3 saat'in saniye değeri olan 10800 çıkarılır.
@@ -120,12 +152,16 @@ const countdown = (e) => {
   minutesEl.innerHTML = formatTime(minutes);
   secondsEl.innerHTML = formatTime(seconds);
 
+  // let deneme = localStorage.setItem(
+  //   "countdown",
+  //   JSON.stringify(inputDate.value)
+  // );
+
   // * Fonksiyon içinde her saniye butona basılarak fonksiyon tekrar tekrar çalıştırılmaktadır. Bu sayede geri sayım devam etmektedir.
   setInterval(function () {
     button.click();
   }, 1000);
 };
-
 // ! countdown FONKSİYONU BİTİŞİ
 // ? ------------------------------ ? //
 // ! addEventListener BAŞLANGICI
@@ -146,3 +182,7 @@ stopTimer.addEventListener("click", () => {
 });
 
 // ! addEventListener BİTİŞİ
+
+// if (localStorage.getItem("countdown")) {
+//   countdown();
+// }

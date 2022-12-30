@@ -8,6 +8,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-image: url("./photo-1672275292775-56d932da070f.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background: rgb(255, 200, 150, 0.3);
 }
 
 h1 {
@@ -21,6 +27,7 @@ h1 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .big-text {
@@ -67,7 +74,16 @@ form .form-item-top {
 .form-div input {
     width: 100%;
     height: 30px;
+    background-color: #f1e5e5;
+    border: 1px solid #dbdbdb;
 }
+
+.form-div input:focus {
+    outline: none;
+    border: 2px solid #dbdbdb;
+}
+
+
 
 form .btn {
     width: 50%;
@@ -84,6 +100,10 @@ form .btn {
     left: 0;
     right: 0;
     text-align: center;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
 }
 
 form .btn:hover {
@@ -105,6 +125,7 @@ h3 .visible {
 
 table {
     border-collapse: collapse;
+    margin-bottom: 40px;
 }
 
 table thead th {
@@ -135,5 +156,15 @@ td {
 
 .countdown-button {
     margin-top: 50px;
-    height: 30px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    background-color: #dbdbdb;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 30px;
+    cursor: pointer;
 }
