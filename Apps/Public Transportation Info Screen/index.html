@@ -9,18 +9,33 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
+
     <title>Public Transportation Info Screen</title>
   </head>
   <body>
+    <!-- ! 1. Page Start -->
+    <div class="screen2">
+      <ul class="screen2__location">
+        <li>Küçükyalı</li>
+        <li id="bostanci1">Bostancı</li>
+        <li>Suadiye</li>
+        <li>Erenköy</li>
+        <li>Göztepe</li>
+      </ul>
+      <div class="firstPath"></div>
+      <div class="firstdonePath"><i class="bi bi-caret-right-fill"></i></div>
+      <div class="number">Train Number: 3030</div>
+    </div>
+    <!-- ! 1. Page End -->
     <!-- ! 2. Page Start -->
     <div class="screen1">
       <ul class="screen1__location">
         <li>Küçükyalı</li>
-        <li class="bostanci">Bostancı</li>
+        <li id="bostanci" class="bostanci">Bostancı</li>
         <li>Suadiye</li>
       </ul>
-      <div class="path"><i class="bi bi-arrow-right"></i></div>
-      <div class="done-path"><i class="bi bi-arrow-right-short"></i></div>
+      <div class="path"><img src="./Component 2.png" alt="" /></div>
+      <div class="done-path"><img src="./Component 1.png" alt="" /></div>
     </div>
     <!-- ! 2. Page End -->
     <!-- ? ----- ----- ----- ----- ? -->
@@ -32,7 +47,7 @@
         <img class="door-two" src="./metroDoor.jpg" alt="" />
       </div>
       <div class="arrow">
-        <i class="bi bi-arrow-up"></i>
+        <img src="./Component 3.png" alt="" />
       </div>
       <div class="text">
         <h1></h1>

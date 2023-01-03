@@ -7,10 +7,10 @@ body {
 }
 
 .screen,
-.screen1 {
-    width: 1400px;
-    height: 800px;
-    border: 1px solid black;
+.screen1,
+.screen2 {
+    width: 1200px;
+    height: 600px;
     background-color: rgb(154, 154, 154);
     color: black;
 }
@@ -20,24 +20,25 @@ body {
 .door {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    transform: scale(0.8);
+    margin-top: -1.2rem;
 }
 
 .arrow {
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
+
 }
 
 .arrow i {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .text {
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
-    font-size: 4rem;
+    margin-top: 4rem;
+    font-size: 3.6rem;
     font-weight: 600;
     justify-content: center;
     align-items: center;
@@ -45,112 +46,196 @@ body {
 }
 
 /* ! 3.Page CSS End ! */
-
+/* ? ----- ----- ----- ----- ? */
+/* ! 2.Page CSS Start ! */
 .screen1__location {
     margin: 0;
-    font-size: 60px;
+    font-size: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 1400px;
+    width: 1000px;
     height: 800px;
     position: relative;
-
+    margin-left: 2rem;
 }
 
 .screen1__location li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transform: rotate(315deg);
-
+    list-style-type: none;
+    margin-bottom: 16.6rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.screen1__location li:nth-child(1):before {
-    content: "";
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: gray;
-    margin-right: 2rem;
+.screen1__location li:nth-child(1)::before {
+    content: "•";
+    font-size: 15rem;
+    vertical-align: middle;
+    color: gray;
 }
 
-.screen1__location li:nth-child(2):before {
-    content: "";
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: yellowgreen;
-    margin-right: 2rem;
+.screen1__location li:nth-child(2)::before {
+    content: "•";
+    font-size: 15rem;
+    vertical-align: middle;
+    color: green;
 }
 
-.screen1__location li:nth-child(3):before {
-    content: "";
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: blue;
-    margin-right: 2rem;
+.screen1__location li:nth-child(3)::before {
+    content: "•";
+    font-size: 15rem;
+    vertical-align: middle;
+    color: yellow;
 }
 
 
 .screen1__location li::marker {
-    font-size: 200px;
     color: yellow;
-}
-
-.screen1__location li:nth-child(1) {
-    color: gray;
 }
 
 .screen1__location li:nth-child(2) {
     color: green;
     margin-top: 1.8rem;
+    z-index: 500;
 }
 
 .screen1__location li:nth-child(3) {
     margin-top: 2.4rem;
-    color: blue;
+    color: rgb(4, 4, 168);
+    z-index: 500;
 }
 
 .path {
-    width: 1220px;
+    width: 780px;
     height: 10px;
-    background-color: blue;
+    background-color: rgb(4, 4, 168);
     position: absolute;
-    top: 34rem;
+    top: 25rem;
+    margin-left: 190px;
 }
 
 .done-path {
-    width: 450px;
+    width: 340px;
     height: 10px;
     background-color: gray;
     position: absolute;
-    top: 34rem;
+    top: 25rem;
+    margin-left: 190px;
 }
 
-.yellow {
-    color: yellow;
-}
-
-.path i {
-    font-size: 100px;
+.path img {
+    width: 4rem;
     z-index: 999;
     position: absolute;
-    right: -80px;
-    top: -49px;
+    right: -70px;
+    top: -16px;
     color: red;
 }
 
-.done-path i {
-    font-size: 100px;
+.done-path img {
+    width: 3.5rem;
     z-index: 999;
     position: absolute;
-    color: yellow;
-    top: -49px;
-    left: 400px;
+    top: -20px;
+    left: 150px;
 }
 
-/* .screen1 {
-    display: none;
-} */
+/* ! 2.Page CSS End ! */
+/* ? ----- ----- ----- ----- ? */
+/* ! 1.Page CSS Start ! */
+.screen2__location {
+    list-style-type: none;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    height: 800px;
+    margin: -8rem auto;
+}
+
+.screen2__location li {
+    transform: rotate(315deg);
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+}
+
+.screen2__location li:nth-child(1)::before,
+.screen2__location li:nth-child(2)::before,
+.screen2__location li:nth-child(3)::before,
+.screen2__location li:nth-child(4)::before,
+.screen2__location li:nth-child(5)::before {
+    content: "•";
+    font-size: 15rem;
+    vertical-align: middle;
+    color: yellow;
+}
+
+.screen2__location li:nth-child(1) {
+    margin-top: -1rem;
+    z-index: 3;
+    color: black;
+}
+
+.screen2__location li:nth-child(1)::before {
+    color: gray;
+}
+
+.screen2__location li:nth-child(2) {
+    z-index: 3;
+}
+
+.screen2__location li:nth-child(3) {
+    margin-top: 0.5rem;
+    z-index: 3;
+}
+
+.screen2__location li:nth-child(4) {
+    margin-top: 0.2rem;
+    z-index: 3;
+}
+
+.screen2__location li:nth-child(5) {
+    margin-top: 0.2rem;
+    z-index: 3;
+}
+
+
+.firstPath {
+    width: 900px;
+    height: 10px;
+    background-color: blue;
+    position: absolute;
+    bottom: 330px;
+    margin-left: 140px;
+}
+
+.firstdonePath {
+    width: 0px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    bottom: 330px;
+    margin-left: 140px;
+}
+
+.firstdonePath i {
+    font-size: 3.5rem;
+    position: absolute;
+    top: -1.6rem;
+    right: -1.4rem;
+    color: yellow;
+}
+
+.screen2 .number {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    font-size: 3rem;
+    color: blue;
+    font-weight: 600;
+}
+
+/* ! 1.Page CSS End ! */
