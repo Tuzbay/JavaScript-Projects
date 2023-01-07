@@ -7,45 +7,133 @@ body {
 }
 
 .screen,
-.screen1,
-.screen2 {
+.screen1 {
     width: 1200px;
     height: 600px;
     background-color: rgb(154, 154, 154);
     color: black;
 }
 
-/* ! 3.Page CSS Start ! */
-
-.door {
-    display: flex;
-    justify-content: center;
-    transform: scale(0.8);
-    margin-top: -1.2rem;
+.screen2 {
+    background-color: white;
+    width: 1200px;
+    height: 600px;
 }
 
-.arrow {
+/* ! 1.Page CSS Start ! */
+.screen2__location {
+    list-style-type: none;
+    font-size: 35px;
     display: flex;
-    justify-content: center;
-
-}
-
-.arrow i {
-    font-size: 4rem;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-    font-size: 3.6rem;
-    font-weight: 600;
-    justify-content: center;
     align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    width: 1000px;
+    height: 800px;
+    margin: -8rem auto;
 }
 
-/* ! 3.Page CSS End ! */
+.screen2__location li {
+    transform: rotate(315deg);
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+}
+
+.screen2__location li:nth-child(1)::before,
+.screen2__location li:nth-child(2)::before,
+.screen2__location li:nth-child(3)::before,
+.screen2__location li:nth-child(4)::before,
+.screen2__location li:nth-child(5)::before {
+    content: "•";
+    font-size: 15rem;
+    vertical-align: middle;
+    color: yellow;
+}
+
+.screen2__location li:nth-child(1) {
+    margin-top: -1rem;
+    z-index: 3;
+    color: gray;
+}
+
+.screen2__location li:nth-child(1)::before {
+    color: gray;
+}
+
+.screen2__location li:nth-child(2) {
+    z-index: 3;
+}
+
+.screen2__location li:nth-child(3) {
+    margin-top: 0.5rem;
+    z-index: 3;
+}
+
+.screen2__location li:nth-child(4) {
+    margin-top: 0.2rem;
+    z-index: 3;
+}
+
+.screen2__location li:nth-child(5) {
+    margin-top: 0.2rem;
+    z-index: 3;
+}
+
+.firstPath {
+    width: 900px;
+    height: 10px;
+    background-color: blue;
+    position: absolute;
+    bottom: 330px;
+    margin-left: 140px;
+}
+
+.firstdonePath {
+    width: 0px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    bottom: 330px;
+    margin-left: 140px;
+    animation: progress-animation 15s infinite;
+}
+
+.firstdonePath i {
+    font-size: 3.5rem;
+    position: absolute;
+    top: -1.6rem;
+    right: -2.4rem;
+    color: yellow;
+}
+
+.screen2 .number {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    font-size: 3rem;
+    color: blue;
+    font-weight: 600;
+}
+
+/* * Animation Start * */
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 10%;
+    }
+
+    100% {
+        width: 16%
+    }
+}
+
+/* * Animation End * */
+
+/* ! 1.Page CSS End ! */
 /* ? ----- ----- ----- ----- ? */
 /* ! 2.Page CSS Start ! */
 .screen1__location {
@@ -66,6 +154,7 @@ body {
     margin-bottom: 16.6rem;
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif;
+
 }
 
 .screen1__location li:nth-child(1)::before {
@@ -102,7 +191,7 @@ body {
 
 .screen1__location li:nth-child(3) {
     margin-top: 2.4rem;
-    color: rgb(4, 4, 168);
+    color: blue;
     z-index: 500;
 }
 
@@ -143,99 +232,34 @@ body {
 
 /* ! 2.Page CSS End ! */
 /* ? ----- ----- ----- ----- ? */
-/* ! 1.Page CSS Start ! */
-.screen2__location {
-    list-style-type: none;
-    font-size: 35px;
+/* ! 3.Page CSS Start ! */
+
+.door {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 1000px;
-    height: 800px;
-    margin: -8rem auto;
+    transform: scale(0.8);
+    margin-top: -1.2rem;
 }
 
-.screen2__location li {
-    transform: rotate(315deg);
+.arrow {
+    display: flex;
+    justify-content: center;
+
+}
+
+.arrow i {
+    font-size: 4rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    font-size: 3.6rem;
     font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
-    color: blue;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.screen2__location li:nth-child(1)::before,
-.screen2__location li:nth-child(2)::before,
-.screen2__location li:nth-child(3)::before,
-.screen2__location li:nth-child(4)::before,
-.screen2__location li:nth-child(5)::before {
-    content: "•";
-    font-size: 15rem;
-    vertical-align: middle;
-    color: yellow;
-}
-
-.screen2__location li:nth-child(1) {
-    margin-top: -1rem;
-    z-index: 3;
-    color: black;
-}
-
-.screen2__location li:nth-child(1)::before {
-    color: gray;
-}
-
-.screen2__location li:nth-child(2) {
-    z-index: 3;
-}
-
-.screen2__location li:nth-child(3) {
-    margin-top: 0.5rem;
-    z-index: 3;
-}
-
-.screen2__location li:nth-child(4) {
-    margin-top: 0.2rem;
-    z-index: 3;
-}
-
-.screen2__location li:nth-child(5) {
-    margin-top: 0.2rem;
-    z-index: 3;
-}
-
-
-.firstPath {
-    width: 900px;
-    height: 10px;
-    background-color: blue;
-    position: absolute;
-    bottom: 330px;
-    margin-left: 140px;
-}
-
-.firstdonePath {
-    width: 0px;
-    height: 10px;
-    background-color: gray;
-    position: absolute;
-    bottom: 330px;
-    margin-left: 140px;
-}
-
-.firstdonePath i {
-    font-size: 3.5rem;
-    position: absolute;
-    top: -1.6rem;
-    right: -1.4rem;
-    color: yellow;
-}
-
-.screen2 .number {
-    position: absolute;
-    bottom: 100px;
-    right: 200px;
-    font-size: 3rem;
-    color: blue;
-    font-weight: 600;
-}
-
-/* ! 1.Page CSS End ! */
+/* ! 3.Page CSS End ! */
