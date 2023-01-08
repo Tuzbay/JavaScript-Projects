@@ -190,3 +190,16 @@ input[type="radio"] {
         transform: rotate(360deg);
     }
 }
+
+.response {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: green;
+}
+
+#response {
+    visibility: hidden;
+    width: 200px;
+
+}

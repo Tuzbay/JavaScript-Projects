@@ -2,6 +2,7 @@ const searchButton = document.querySelector(".submit");
 const searchButtonContent = document.querySelector("#search-button div");
 const textarea = document.querySelector("textarea");
 const inputSection = document.querySelector(".input-section");
+const response = document.querySelector("#response");
 
 searchButton.addEventListener("click", toggle);
 
@@ -15,5 +16,6 @@ function toggle() {
     searchButtonContent.classList.remove("loading");
     textarea.style.opacity = "1";
     inputSection.style.opacity = "1";
+    response.style.visibility = "visible";
   }, 3000);
 }
