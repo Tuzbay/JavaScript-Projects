@@ -1,48 +1,47 @@
-const gallery = document.querySelectorAll(".gallery .image");
-previewBox = document.querySelector(".preview-box");
-previewImg = previewBox.querySelector("img");
-closeIcon = previewBox.querySelector(".icon");
-currentImg = previewBox.querySelector(".current-img");
-totalImg = previewBox.querySelector(".total-img");
-shadow = document.querySelector(".shadow");
+const gallery = document.querySelectorAll(".image"),
+  previewBox = document.querySelector(".preview-box"),
+  previewImg = previewBox.querySelector("img"),
+  closeIcon = previewBox.querySelector(".icon"),
+  currentImg = previewBox.querySelector(".current-img"),
+  totalImg = previewBox.querySelector(".total-img"),
+  shadow = document.querySelector(".shadow");
 
 window.onload = () => {
   for (let i = 0; i < gallery.length; i++) {
-    totalImg.textContent = gallery.length;
+    totalImg.textContent = gallery.length; // ! Yukarıdaki sıralamaları gösteren kod bloğu.
     let newIndex = i;
     let clickImgIndex;
     gallery[i].onclick = () => {
       clickImgIndex = newIndex;
-      console.log(i);
 
       function preview() {
-        currentImg.textContent = newIndex + 1;
-        let selectedImgUrl = gallery[newIndex].querySelector("img").src;
-        previewImg.src = selectedImgUrl;
+        currentImg.textContent = newIndex + 1; // ! Yukarıdaki sıralamaları gösteren kod bloğu.
+        let selectedImgUrl = gallery[newIndex].querySelector("img").src; // ! Bu kod bloğu ile tıklanan resmin source kodunu alırız.
+        previewImg.src = selectedImgUrl; // ! Bu kod bloğu ile img source kısmına yukarıda tıkladığımızda aldığımız url kodunu tanımlarız.
       }
-
+      // ! Aşağıdaki tanımlamalarda ileri ve geri butonları tanımlanmıştır.
       const prevBtn = document.querySelector(".prev");
       const nextBtn = document.querySelector(".next");
 
       if (newIndex == 0) {
-        prevBtn.style.display = "none";
+        prevBtn.style.display = "none"; // ! İndeks 0'a eşitse prev butonu gösterme.
       }
 
       if (newIndex >= gallery.length - 1) {
-        nextBtn.style.display = "block";
+        nextBtn.style.display = "none"; // ! İndeks son resme aitse eşitse next butonu gösterme.
       }
-
+      // ! Tanımlanan kod bloklarına fonksiyonları atarız.
       prevBtn.onclick = () => {
-        newIndex--;
+        newIndex--; // ! İndexi düşür
         if (newIndex == 0) {
-          preview();
-          prevBtn.style.display = "none";
+          preview(); // ! Düşürdükten sonra tekrar çağır.
+          prevBtn.style.display = "none"; // ! İndeks sıfıra geldiğinde daha geri gidilemeyeceği için buton kaldırılır.
         } else {
           preview();
           nextBtn.style.display = "block";
         }
       };
-
+      // ! Previous butonunda yapılanların aynısı yapılmıştır.
       nextBtn.onclick = () => {
         newIndex++;
         if (newIndex >= gallery.length - 1) {
@@ -57,8 +56,7 @@ window.onload = () => {
       preview();
       previewBox.classList.add("show");
       shadow.style.display = "block";
-      document.querySelector("body").style.overflow = "hidden";
-
+      // ! Aşağıdaki kod bloğu ile galeri açıldığında çarpı butonuna basıp kapamak için gereken kodlar yazılmıştır.
       closeIcon.onclick = () => {
         newIndex = clickImgIndex;
         prevBtn.style.display = "block";
