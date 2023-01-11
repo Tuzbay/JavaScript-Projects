@@ -1,0 +1,122 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #bdbdbd;
+}
+
+.wrapper {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3f3e3e;
+    color: white;
+    border-radius: 18px;
+}
+
+.wrapper .form {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    gap: 6px;
+    width: 300px;
+}
+
+.wrapper .form .expiration {
+    display: flex;
+    gap: 6px;
+}
+
+.wrapper .form .cardNo {
+    display: flex;
+    gap: 6px;
+}
+
+.wrapper .form .cardNo input {
+    width: 100%;
+}
+
+.wrapper .form .expiration input {
+    width: 100%;
+}
+
+.wrapper .form label {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper .form input {
+    height: 24px;
+    margin-bottom: 1.2rem;
+    background-color: #bdbdbd;
+}
+
+.wrapper .credit-card-front,
+.wrapper .credit-card-back {
+    width: 524px;
+    height: 265px;
+    border-radius: 12px;
+    margin: auto auto;
+    background-color: #4f5a6e;
+    position: relative;
+}
+
+.wrapper .credit-card-back {
+    display: none;
+}
+
+.wrapper .credit-card-front h1,
+.wrapper .credit-card-back h1 {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-family: 'Poppins', monospace;
+    font-size: 30px;
+}
+
+.wrapper .credit-card-front h2 {
+    color: white;
+    position: absolute;
+    bottom: 5rem;
+    left: 2rem;
+    letter-spacing: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 26px;
+}
+
+.wrapper .credit-card-back h2 {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    letter-spacing: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    right: 50%;
+    top: 50%;
+}
+
+.wrapper .credit-card-front h3 {
+    color: white;
+    position: absolute;
+    bottom: -1rem;
+    left: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
+}
+
+.wrapper .credit-card-front h4 {
+    color: white;
+    position: absolute;
+    bottom: -0.5rem;
+    right: 8rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+}
+
+.wrapper .credit-card-front img {
+    width: 80px;
+    position: absolute;
+    bottom: -0.6rem;
+    right: 0.2rem;
+}
