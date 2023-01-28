@@ -6,8 +6,8 @@ body {
 }
 
 .wrapper {
-    width: 900px;
-    height: 500px;
+    min-width: 900px;
+    min-height: 500px;
     display: flex;
     justify-content: space-between;
     background-color: #3f3e3e;
@@ -37,7 +37,7 @@ body {
     width: 100%;
 }
 
-.wrapper .form .expiration input {
+.wrapper .form .expiration select {
     width: 100%;
 }
 
@@ -52,6 +52,19 @@ body {
     background-color: #bdbdbd;
 }
 
+.wrapper .form select {
+    height: 24px;
+    margin-bottom: 1.2rem;
+    background-color: #bdbdbd;
+}
+
+/* ! --- --- --- ! */
+
+.innerCard {
+    margin: auto auto;
+    transition: 5s ease all;
+}
+
 .wrapper .credit-card-front,
 .wrapper .credit-card-back {
     width: 524px;
@@ -60,10 +73,12 @@ body {
     margin: auto auto;
     background-color: #4f5a6e;
     position: relative;
+    transition: 5s ease all;
 }
 
 .wrapper .credit-card-back {
     display: none;
+
 }
 
 .wrapper .credit-card-front h1,
@@ -76,14 +91,20 @@ body {
     font-size: 30px;
 }
 
-.wrapper .credit-card-front h2 {
+.cardNoCard {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.wrapper .credit-card-front .cardNoCard {
     color: white;
     position: absolute;
     bottom: 5rem;
     left: 2rem;
     letter-spacing: 8px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 26px;
+    font-size: 18px;
 }
 
 .wrapper .credit-card-back h2 {
@@ -99,24 +120,36 @@ body {
 .wrapper .credit-card-front h3 {
     color: white;
     position: absolute;
-    bottom: -1rem;
+    bottom: -0.5rem;
     left: 1rem;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 22px;
+    letter-spacing: 3px;
 }
 
-.wrapper .credit-card-front h4 {
+.wrapper .credit-card-front .cardDate {
     color: white;
     position: absolute;
     bottom: -0.5rem;
     right: 8rem;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 18px;
+    display: flex;
+    gap: 0.5rem;
 }
 
-.wrapper .credit-card-front img {
+.wrapper .credit-card-front .mastercard {
     width: 80px;
     position: absolute;
-    bottom: -0.6rem;
-    right: 0.2rem;
+    bottom: -0.5rem;
+    right: 0.5rem;
+    visibility: hidden;
+}
+
+.wrapper .credit-card-front .visa {
+    width: 80px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    visibility: hidden;
 }

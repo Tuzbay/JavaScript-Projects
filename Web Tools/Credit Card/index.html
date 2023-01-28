@@ -25,12 +25,38 @@
         <input type="text" class="cardName-input input1" />
 
         <label>Kart Numarası:</label>
-        <input type="text" maxlength="16" class="cardNo-input input2" />
+        <div class="cardNo">
+          <input type="text" maxlength="4" class="cardNo-input1 input" />
+          <input type="text" maxlength="4" class="cardNo-input2 input" />
+          <input type="text" maxlength="4" class="cardNo-input3 input" />
+          <input type="text" maxlength="4" class="cardNo-input4 input" />
+        </div>
 
         <label>Son Kullanım Tarihi:</label>
         <div class="expiration">
-          <input type="text" class="cardDate-input input3" placeholder="Ay" />
-          <input type="text" class="cardDate-input input3" placeholder="Yıl" />
+          <select class="cardDate-inputMonth input3">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+          <select class="cardDate-inputYear input3">
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+          </select>
         </div>
 
         <label>Güvenlik Kodu (CVV2):</label>
@@ -38,16 +64,26 @@
       </div>
       <div class="credit-card-front">
         <h1>Credit Card</h1>
-        <h2></h2>
+        <div class="cardNoCard">
+          <h2 class="input-area-1"></h2>
+          <h2 class="input-area-2"></h2>
+          <h2 class="input-area-3"></h2>
+          <h2 class="input-area-4"></h2>
+        </div>
         <h3></h3>
-        <h4></h4>
-        <img src="./mastercard-26161.png" alt="" />
+        <div class="cardDate">
+          <h4 class="month"></h4>
+          <h4 class="year"></h4>
+        </div>
+        <img class="mastercard" src="./mastercard-26161.png" alt="" />
+        <img class="visa" src="./visa-logo-png-2016.png" alt="" />
       </div>
-      <div class="credit-card-back back">
+      <div class="credit-card-back">
         <h1>Credit Card</h1>
         <h2></h2>
       </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
